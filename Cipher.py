@@ -18,8 +18,8 @@ def string_shift(text: str, key: int):
 @click.command()
 @click.argument('input_f', type=click.File('r'))
 @click.argument('output_f', type=click.File('w'))
-@click.option('--encode', 'mode', flag_value = 1, default=True)
-@click.option('--decode', 'mode', flag_value = -1)
+@click.option('--encode', 'mode', flag_value = 3, default=True)
+@click.option('--decode', 'mode', flag_value = -3)
 def Caesar(input_f, output_f, mode):
     while True:
         line = input_f.readline()
